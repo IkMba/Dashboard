@@ -2,21 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +10,90 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+:root {
+  --bg: #151c2c;
+  --bgSoft: #182237;
+  --text: white;
+  --textSoft: #b7bac1;
+  --text-grey: #83858a;
+  --bg-lighter: #2e374a;
+  --text-green: lime;
+  --text-red: #ce0606;
+  --btn-pending: #f7cb7375;
+  --btn-done: #afd6ee75;
+  --btn-cancelled: #f7737375;
+  --btn-blue: #5d57c9;
+  --teal: teal;
+  --crimson: crimson;
+}
+body {
+  box-sizing: border-box;
+  background-color: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+  color: var(--textSoft);
+}
+h3 {
+  font-size: 20px;
+  color: var(--textSoft);
+}
+p {
+  font-size: 14px;
+  color: var(--text-grey);
+}
+
+table td {
+  padding-top: 10px;
+  font-size: 14px;
+  align-items: center;
+}
+/* table tr {
+ padding: 10px;
+}
+table tr:hover {
+  background-color: var(--bg-lighter);
+} */
+
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 2px solid #2e374a;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+form input,
+form select {
+  width: 45%;
+}
+
+form textarea {
+  width: 100%;
+}
+
+form button {
+  width: 100%;
+  padding: 30px;
+  background-color: teal;
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @layer utilities {
