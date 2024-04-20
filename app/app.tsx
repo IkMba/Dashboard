@@ -4,7 +4,9 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import React from "react";
 import { Toaster } from "react-hot-toast";
 
-export default function App({ children }) {
+export default function App({ children }:{
+ children: React.ReactNode;
+}) {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
