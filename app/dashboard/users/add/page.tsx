@@ -15,19 +15,19 @@ export default function addUserPage() {
         />
         <input type="phone" placeholder="phone" name="phone" />
         <select name="isAdmin" id="isAdmin">
-          <option value={false}>Is Admin?</option>
-          <option value={true}>Yes</option>
-          <option value={false}>No</option>
+          <option value={"false"}>Is Admin?</option>
+          <option value={"true"}>Yes</option>
+          <option value={"false"}>No</option>
         </select>
         <select name="isActive" id="isActive">
-          <option value={true}>Is Active?</option>
-          <option value={true}>Yes</option>
-          <option value={false}>No</option>
+          <option value={"true"}>Is Active?</option>
+          <option value={"true"}>Yes</option>
+          <option value={"false"}>No</option>
         </select>
         <textarea
           name="address"
           id="address"
-          rows="5"
+          rows={5}
           placeholder="Address"
         ></textarea>
         <div className="flex justify-end w-full">

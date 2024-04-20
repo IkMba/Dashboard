@@ -7,10 +7,11 @@ import Image from "next/image";
 import Button from "@/app/ui/dashboard/Button";
 import Link from "next/link";
 import { getProducts } from "@/app/services/apiProducts";
+import { products } from "@/app/lib/type";
 
 export default function Products() {
   // const products = getProducts();
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<products[]>([]);
   useEffect(() => {
     const fetch = async () => {
       const pro = await getProducts();
@@ -41,10 +42,9 @@ export default function Products() {
         </thead>
         <tbody className="mt-4">
           {products.map((item) => (
-            <tr key={item.name} className="">
+            <tr key={item.id} className="">
               <td className="flex gap-2">
                 <Image
-                 
                   src={item.image || "/noavatar.png"}
                   alt="user-photo"
                   width="50"

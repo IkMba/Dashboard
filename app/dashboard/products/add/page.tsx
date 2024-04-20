@@ -20,7 +20,7 @@ export default function addProductPage() {
           required
           name="desc"
           id="desc"
-          rows="16"
+          rows={16}
           placeholder="Description"
         ></textarea>
         <div className="flex justify-end w-full">
