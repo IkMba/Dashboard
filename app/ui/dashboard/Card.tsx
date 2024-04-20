@@ -1,7 +1,7 @@
+import { cardType } from "@/app/lib/type";
 import React from "react";
-import { MdDashboard } from "react-icons/md";
 
-export default function Card({ item }) {
+export default function Card({ item }: { item: cardType }) {
   return (
     <div className="bg-bg-light flex-1 px-4 py-2 rounded-lg flex flex-col gap-2 hover:bg-bg-lighter">
       <div className="flex pt-2 gap-2 items-center">

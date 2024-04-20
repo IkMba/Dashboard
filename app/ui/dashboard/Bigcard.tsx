@@ -1,7 +1,9 @@
 import React from "react";
 import Button from "./Button";
+import { StringDecoder } from "string_decoder";
+import { bigCardType } from "@/app/lib/type";
 
-export default function Bigcard({ item }) {
+export default function Bigcard({ item }: { item: bigCardType }) {
   return (
     <div className="px-4 py-2 flex flex-col gap-3 rounded-md bg-bg-light hover:bg-bg-lighter">
       <h5>{item.tag}</h5>
